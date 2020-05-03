@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Frutas y Verduras</title> 
+    <link rel="shortcut icon" href="img/ico.png"> 
+    <link rel="stylesheet" href="css/styles.css">     
+        
+</head>
+<body>
+<form action="" class="formulario">
+   <img src="img/logonuevo.png" class="logo" />
+<div>
+    <h2 class="formulario__subtitulo">Pedidos de Frutas y verduras</h2>
+    <h3 class="formulario__parrafo">Bienbenidos, elija su producto dando click en Agregar</h3>
+<div>
+    <table class="table1" align="center">
+ <!--TOMATE-->      
+<tr class="fila"><td colspan="5" align="left"></td></tr>
+        <tr>                      
+            <td><img src="img/tomate.jpg" alt=""></td>           
+            <td class="sep__centro"></td>
+            <td><img src="img/tomate.jpg" alt=""></td>            
+        </tr>
+
+        <tr>            
+            <td align="center">Tomate</td>
+            <td class="sep__centro"></td>
+            <td align="center">Tomate</td>            
+        </tr>
+        <tr>            
+            <td align="center">1 libra</td>
+            <td class="sep__centro"></td>
+            <td align="center"> 2 libras</td>           
+        </tr>
+        <tr>            
+            <td align="center">80 centavos</td>
+            <td class="sep__centro"></td>
+            <td align="center"> 1,50 dolares</td>           
+        </tr>
+        <tr>            
+            <td align="center"><input type="button" value="Agregar" onclick="tomate1lb()"></td>
+            <td class="sep__centro"></td>
+            <td align="center"><input type="button" value="Agregar" onclick="tomate2lb()"></button></td>           
+        </tr>
+<tr class="fila"><td colspan="5" align="left"></td></tr>
+<tr class="fila"><td colspan="5" align="left"></td></tr>
+<!--PIMIENTO-->
+        <tr>                      
+            <td><img src="img/pimiento.jpg" alt=""></td>           
+            <td class="sep__centro"></td>
+            <td><img src="img/pimiento.jpg" alt=""></td>            
+        </tr>
+
+        <tr>            
+            <td align="center">Pimiento</td>
+            <td class="sep__centro"></td>
+            <td align="center">Pimiento</td>            
+        </tr>
+        <tr>            
+            <td align="center">1 libra</td>
+            <td class="sep__centro"></td>
+            <td align="center"> 2 libras</td>           
+        </tr>
+        <tr>            
+            <td align="center">60 centavos</td>
+            <td class="sep__centro"></td>
+            <td align="center"> 1 dolares</td>           
+        </tr>
+        <tr>            
+            <td align="center"><input type="button" onclick="pimiento1lb()" value="Agregar"></td>
+            <td class="sep__centro"></td>
+            <td align="center"><input type="button" onclick="pimiento2lb()" value="Agregar"></td>           
+        </tr>
+
+        <tr class="fila"><td colspan="5" align="left"></td></tr>
+        <!--CEBOLLA-->
+        <tr>                      
+            <td><img src="img/cebolla.jpg" alt=""></td>           
+            <td class="sep__centro"></td>
+            <td><img src="img/cebolla.jpg" alt=""></td>            
+        </tr>
+
+        <tr>            
+            <td align="center">Cebolla</td>
+            <td class="sep__centro"></td>
+            <td align="center">Cebolla</td>            
+        </tr>
+        <tr>            
+            <td align="center">  1 libra</td>
+            <td class="sep__centro"></td>
+            <td align="center"> 2 libras</td>           
+        </tr>
+        <tr>            
+            <td align="center">1 dolar</td>
+            <td class="sep__centro"></td>
+            <td align="center">2 dolares</td>           
+        </tr>
+        <tr>            
+            <td align="center"><input type="button" value="Agregar" onclick="cebolla1lb()"></td>
+            <td class="sep__centro"></td>
+            <td align="center"><input type="button" value="Agregar" onclick="cebolla2lb()"></button></td>           
+        </tr>
+<tr class="fila"><td colspan="5" align="left"></td></tr>
+<tr class="fila"><td colspan="5" align="left"></td></tr>
+<tr class="fila"><td colspan="5" align="left"></td></tr>  
+    </table>
+</div>
+<!--LISTA DE COMPRAS-->
+<h2 class="formulario__subtitulo">Su lista de compras es:</h2>
+<div class="lista">
+    <table align="center">
+        <tr>
+            <td><input type="text" id="tomateText" readonly></td>
+            <td><input type="text" size="5" id="tomateValor" readonly></td>
+            <td><input type="button" onclick="eliminar_tom()" value="eliminar" class="eliminar-btn"></td>
+            
+        </tr>
+        <tr>
+            <td><input type="text" id="piminetoText" readonly></td>
+            <td><input type="text" size="5" id="pimientoValor" readonly></td>
+            <td><input type="button" onclick="eliminar_pim()" value="eliminar" class="eliminar-btn"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="cebollaText" readonly></td>
+            <td><input type="text" size="5" id="cebollaValor" readonly></td>
+            <td><input type="button" onclick="eliminar_ceb()" value="eliminar" class="eliminar-btn"></td>
+        </tr>
+        <!--SUB TOTALES-->
+        <tr>
+            <td><input type="text" value="costo de envio a domicilio" readonly></td>
+            <td><input type="text" size="5" value="0" readonly></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="total a pagar" readonly></td>
+            <td><input type="text" size="5" id="total" value="0" readonly></td>
+            <td></td>
+        </tr>
+<tr class="fila"><td colspan="3" align="left"></td></tr>
+<tr class="fila"><td colspan="3" align="left"></td></tr>
+        
+    </table>
+    <h3 class="formulario__parrafo">complete sus datos de envio por favor</h3>
+
+    <!--DATOS DEL CLEINTE-->
+    <table align="center">
+        <tr>
+            <td><label>Nombre</label></td>
+            <td><input type="text" size="23" id="nombre" placeholder="ingrese su nombre aqui"></td>
+        </tr>
+        <tr>
+            <td><label>Direccion</label></td>
+            <td><input type="text" size="23" id="direccion" placeholder="ingrese su direccion aqui"></td>
+        </tr>
+        <tr>
+            <td><label>Horario de entrega</label></td>
+            <td><select name="" id="horario">
+                <option>____click para elegir horario</option>
+                <option>de 8:30 a 9:00</option>
+                <option>de 9:30 a 10:00</option>
+                <option>de 10:30 a 11:00</option>
+                <option>de 15:30 a 16:00</option>
+                <option>de 16:30 a 17:00</option>
+            </select></td>
+</tr><tr class="fila"><td colspan="2" align="left"></td></tr>        
+
+    </table>
+
+    <table align="right">
+        <tr align="left">
+            <td><input type="button" id="submit" value=" Comprar Ahora !"></td>
+            <td></td>
+        </tr>
+    </table>
+
+    
+
+</div>
+    <div id="respuesta"></div>
+</div>
+</form>
+
+<script>    
+    pim1=0, pim2=0, tom1=0, tom2=0, ceb1=0, ceb2=0
+
+    
+    
+    function sumar(){        
+        totalSuma=tom1+tom2+pim1+pim2+ceb1+ceb2
+        document.getElementById("total").value=totalSuma
+     
+    }
+    
+    function tomate1lb(){
+        tom2=0
+        tom1=0            
+        document.getElementById("tomateText").value="1 libra de tomate"       
+        tom1=document.getElementById("tomateValor").value=0.80                
+        sumar()
+        
+    }
+    function tomate2lb(){
+        tom1=0
+        tom2=0     
+        document.getElementById("tomateText").value="2 libras de tomate"
+        tom2=document.getElementById("tomateValor").value=1.50
+        sumar()
+    }
+    function eliminar_tom(){
+        document.getElementById("tomateText").value=""
+        document.getElementById("tomateValor").value=""
+        tom1=0, tom2=0        
+        sumar()
+    }
+
+    function pimiento1lb(){
+        pim2=0
+        pim1=0               
+        document.getElementById("piminetoText").value="1 libra de pimiento"
+        pim1=document.getElementById("pimientoValor").value=0.60
+        sumar()
+    }
+    function pimiento2lb(){
+        pim1=0
+        pim2=0      
+        document.getElementById("piminetoText").value="2 libras de pimiento"
+        pim2=document.getElementById("pimientoValor").value=1
+        sumar()
+    }
+    function eliminar_pim(){
+        document.getElementById("piminetoText").value=""
+        document.getElementById("pimientoValor").value=""
+        pim1=0, pim2=0
+        sumar()
+    }
+
+    function cebolla1lb(){
+        ceb2=0
+        ceb1=0              
+        document.getElementById("cebollaText").value="1 libra de cebolla"
+        ceb1=document.getElementById("cebollaValor").value=1
+        
+        sumar()
+    }
+    function cebolla2lb(){
+        ceb1=0
+        ceb2=0      
+        document.getElementById("cebollaText").value="2 libras cebolla"
+        ceb2=document.getElementById("cebollaValor").value=2
+        sumar()
+    }
+    function eliminar_ceb(){
+        document.getElementById("cebollaText").value=""
+        document.getElementById("cebollaValor").value=""
+        ceb1=0, ceb2=0
+        sumar()
+    }
+</script> 
+<script src="js/pedido.js"></script>   
+</body>
+</html>
